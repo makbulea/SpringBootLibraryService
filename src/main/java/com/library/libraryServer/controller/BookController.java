@@ -20,8 +20,8 @@ public class BookController {
 
 
     @GetMapping("/book")
-    public ResponseEntity<List<BookDto>> getAllUser() {
-        return ResponseEntity.ok(bookService.getAllUser());
+    public ResponseEntity<List<BookDto>> getAllBook() {
+        return ResponseEntity.ok(bookService.getAllBook());
     }
 
     @GetMapping("book/{id}")
@@ -30,13 +30,13 @@ public class BookController {
     }
 
     @PostMapping("/book")
-    public ResponseEntity<BookDto> createUser(@RequestBody BookDto book) {
-        return ResponseEntity.ok(bookService.createUser(book));
+    public ResponseEntity<BookDto> createBook(@RequestBody BookDto book) {
+        return ResponseEntity.ok(bookService.createBook(book));
     }
 
     @PutMapping("book/{id}")
-    public ResponseEntity<BookDto> updateUser(@PathVariable Long id,
+    public ResponseEntity<BookDto> updateBook(@PathVariable Long id,
                                               @RequestBody BookDto book) {
-        return ResponseEntity.ok(bookService.updateUser(id,book));
+        return ResponseEntity.ok(bookService.updateBook(id,book));
     }
 }
